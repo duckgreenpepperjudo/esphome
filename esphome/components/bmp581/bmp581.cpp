@@ -75,7 +75,7 @@ void BMP581Component::dump_config() {
       ESP_LOGE(TAG, "  Communication with BMP581 failed!");
       break;
     case ERROR_WRONG_CHIP_ID:
-      ESP_LOGE(TAG, "  BMP581 has wrong chip ID - please verify you are using a BMP 581");
+      ESP_LOGE(TAG, "  BMP581 has wrong chip ID - please verify you are using a BMP 581. IK!");
       break;
     case ERROR_SENSOR_RESET:
       ESP_LOGE(TAG, "  BMP581 failed to reset");
@@ -156,7 +156,7 @@ void BMP581Component::setup() {
 
   // verify id
   if (chip_id != BMP581_ASIC_ID) {
-    ESP_LOGE(TAG, "Unknown chip ID, is this a BMP581?");
+    ESP_LOGE(TAG, "Unknown chip ID, is this a BMP581? Nope! ");
 
     this->error_code_ = ERROR_WRONG_CHIP_ID;
     this->mark_failed();
