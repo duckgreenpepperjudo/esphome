@@ -9,7 +9,7 @@
 namespace esphome {
 namespace bmp581 {
 
-static const uint8_t BMP581_ASIC_ID = 0x50;  // BMP581's ASIC chip ID (page 51 of datasheet)
+static const uint8_t BMP581_ASIC_ID = 0x51;  // BMP581's ASIC chip ID (page 51 of datasheet)
 static const uint8_t RESET_COMMAND = 0xB6;   // Soft reset command
 
 // BMP581 Register Addresses
